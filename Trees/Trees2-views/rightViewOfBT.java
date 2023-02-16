@@ -24,6 +24,7 @@ public class rightViewOfBT {
                 if (temp.right != null)
                     q.add(temp.right);
             }
+            
         }
         // another way without for loop - using nnull to dentify the levels
         // ArrayList<Integer> ans = new ArrayList<>();
