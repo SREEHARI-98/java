@@ -1,20 +1,22 @@
 package Trees;
+
 import java.util.*;
+
 public class InorderTraversal {
-    public static void main(String[] args) {
-        TreeNode temp = new TreeNode(1);
-        Stack<TreeNode> stack  = new Stack<>();
+    public static ArrayList<Integer> inorderTraversal(TreeNode temp) {
+        // TreeNode temp = new TreeNode(1);
+        Stack<TreeNode> stack = new Stack<>();
         ArrayList<Integer> ans = new ArrayList<>();
-        while(temp != null || !stack.empty()){
-            if(temp != null){
+        while (temp != null || !stack.empty()) {
+            if (temp != null) {
                 stack.push(temp);
                 temp = temp.left;
-            }else{
+            } else {
                 temp = stack.pop();
                 ans.add(temp.val);
                 temp = temp.right;
             }
         }
-        System.out.println(ans);
-    } 
+        return ans;
+    }
 }
